@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+all topics
+{% endblock %}
+
+{% block stylesheet %}
+{% endblock %}
+
+{% block profile %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+                       {% if messages %}
+                        <div class="messages">
+                            {% for message in messages %}
+                            <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'createtopic' %}" class="btn btn-primary pull pull-right">Create Category</a>
+    {% endif %}
+    <h2>{{t.article_author.name.get_full_name }}</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <td style="color:green"><b>Topic</b></td>
+            <td style="color:green"><b>Action</b></td>
+        </tr>
+        </thead>
+        <tbody>
+        {% for t in topic %}
+        <tr>
+            <td style="color:blue"><a href="{% url 'topic' name=t.name %}">{{t.name}}</a></td>
+
+            <td style="color:blue"><a href="{% url 'topicdelete' pid=t.id %}"">Delete</a>||<a href="">Edit</a></td>
+        </tr>
+        {%endfor%}
+
+        </tbody>
+
+    </table>
+</div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

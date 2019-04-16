@@ -1,0 +1,54 @@
+
+{% extends 'base.html' %}
+{% block title %}
+welcome to profile page
+{% endblock %}
+{% block stylesheet %}
+<style>
+.alert.alert-success {
+    margin-top: 200 px;
+    height: 50 px;
+
+}
+
+.alert {
+    margin-top: 200px;
+    height: 50px
+}
+</style>
+{% endblock %}
+{% block profile %}
+
+	<div class="fh5co-bio">
+			<figure>
+				{% load staticfiles %}
+				<img src="{{auth.profile_picture.url}}" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+			</figure>
+			<h3 class="heading">About Me</h3>
+			<h2>{{auth.name.get_full_name}}</h2>
+			<p>{{auth.details}}</p>
+			<ul class="fh5co-social">
+				<li><a href="#"><i class="icon-twitter"></i></a></li>
+				<li><a href="#"><i class="icon-facebook"></i></a></li>
+				<li><a href="#"><i class="icon-instagram"></i></a></li>
+			</ul>
+		</div>
+{% endblock %}
+{% block content %}
+<h1>Author: {{auth.name.get_full_name}}</h1>
+			{% for p in post %}
+              <article class="col-lg-3 col-md-3 col-sm-3 col-xs-6 col-xxs-12 animate-box">
+				<figure>
+					<a href="{% url 'single_post' id=p.id %}"><img src="{{p.image.url}}" alt="Image" class="img-responsive"></a>
+				</figure>
+				<span class="fh5co-meta"><a href="{% url 'single_post' id=p.id %}">{{p.category}}</a></span>
+				<h2 class="fh5co-article-title"><a href="{% url 'single_post' id=p.id %}">{{p.title}}</a></h2>
+				<span class="fh5co-meta fh5co-date">{{p.posted_on}}</span>
+			</article>
+            {% endfor %}
+
+		{% endblock %}
+
+{% block script %}
+{% endblock %}
+
