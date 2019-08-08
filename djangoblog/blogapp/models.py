@@ -10,12 +10,12 @@ class author(models.Model):
     profile_picture= models.FileField()
     details = models.TextField()
     def __str__(self):
-        return self.name.username
+        return self.name.username.upper()
 
 class category(models.Model):
     name = models.CharField(max_length=100)
     def __str__(self):
-        return self.name
+        return self.name.upper()
 
 class article(models.Model):
     article_author = models.ForeignKey(author, on_delete=models.CASCADE)
@@ -28,7 +28,7 @@ class article(models.Model):
     posted_on = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True, auto_now_add=False)
     def __str__(self):
-        return self.title
+        return self.title.upper()
 
 class comment(models.Model):
     post=models.ForeignKey(article, on_delete=models.CASCADE)
@@ -36,6 +36,6 @@ class comment(models.Model):
     email=models.EmailField(max_length=100)
     post_comment=models.TextField()
     def __str__(self):
-        return self.post.title
+        return self.post.title.upper()
 
 

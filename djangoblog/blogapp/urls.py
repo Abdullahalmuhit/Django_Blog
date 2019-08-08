@@ -16,4 +16,5 @@ urlpatterns = [
     path('topics/', views.getcategory, name="category"),
     path('create/topic', views.createtopic, name="createtopic"),
     path('deletetopic/<int:pid>', views.topicdelete, name="topicdelete"),
+    path('pdf/<int:id>', views.Pdf.as_view(), name = 'pdf')
 ]

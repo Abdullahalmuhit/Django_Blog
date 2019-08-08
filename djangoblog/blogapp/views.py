@@ -6,6 +6,8 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from .forms import createform, register_user, createauthor,commentform, categoryform
 from django.contrib import messages
+from django.views.generic.base import TemplateView, View
+from .requery import renderPdf
 
 
 # Create your views here.
@@ -190,3 +192,17 @@ def topicdelete(request, pid):
         return redirect('category')
     else:
         return redirect('login')
+
+
+
+class Pdf(View):
+    def get(self, request, id):
+        try:
+            query = get_object_or_404(article, id=id)
+        except:
+            Http404('connection not found')
+        context = {
+            'article':query
+        }
+        article_pdf = renderPdf('pdf.html', context)
+        return HttpResponse(article_pdf, content_type='application/pdf')

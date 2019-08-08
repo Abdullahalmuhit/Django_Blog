@@ -46,6 +46,21 @@ INSTALLED_APPS = [
 
 ]
 CKEDITOR_UPLOAD_PATH ='uploads/'
+KEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+}
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+    },
+}
+
+
 
 
 
