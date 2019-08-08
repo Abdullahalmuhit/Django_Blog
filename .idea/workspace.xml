@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/djangoblog/blogapp/views.py" description="instance=form.save(commit=False)" line="163" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b8da342-23a9-4e2d-b730-500a9c0ea5aa" name="Default Changelist" comment="" />
+    <list default="true" id="8b8da342-23a9-4e2d-b730-500a9c0ea5aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoblog/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoblog/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoblog/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoblog/templates/create.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -45,6 +52,7 @@
         <option value="$PROJECT_DIR$/djangoblog/templates/base.html" />
         <option value="$PROJECT_DIR$/djangoblog/templates/index.html" />
         <option value="$PROJECT_DIR$/djangoblog/templates/topics.html" />
+        <option value="$PROJECT_DIR$/djangoblog/blogapp/migrations/__init__.py" />
       </list>
     </option>
   </component>
@@ -53,27 +61,19 @@
     <option name="width" value="1944" />
     <option name="height" value="1044" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="djangoproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djangoproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -177,7 +177,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1296" height="696" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17394757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17380953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -216,15 +216,7 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../django/ProjectDjango/blog/blogapp/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../django/ProjectDjango/blog/blogapp/admin.py" />
     <entry file="file://$PROJECT_DIR$/djangoblog/templates/category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
@@ -392,6 +384,19 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoblog/blogapp/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#49#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/djangoblog/blogapp/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
