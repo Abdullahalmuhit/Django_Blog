@@ -30,7 +30,7 @@ class article(models.Model):
         return self.title
 
 class comment(models.Model):
-    post=models.ForeignKey(article, on_delete=models.CASCADE)
+    post=models.ForeignKey(article, on_delete=models.CASCADE, blank=True, null=True)
     name=models.CharField(max_length=100)
     email=models.EmailField(max_length=100)
     post_comment=models.TextField()
