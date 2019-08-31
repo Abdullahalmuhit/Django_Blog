@@ -25,7 +25,7 @@ SECRET_KEY = '7-q!=zfrgw9_(ful1)e4sn6yrvr26k1rre*z7x%=m=@(boo!+o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -68,9 +68,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
         #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
-
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 5,
 
     'DEFAULT_AUTHENTICATION_CLASSES': (
             'rest_framework.authentication.TokenAuthentication',
