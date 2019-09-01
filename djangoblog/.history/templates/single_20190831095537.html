@@ -62,7 +62,7 @@
 					 <figure class="animate-box">
 						 <a href="{% url 'single_post' id=r.id %}"><img src="{{r.image.url}}" alt="Image" class="img-responsive"></a>
 						 <a href="{% url 'single_post' id=r.id %}"><h2 class="fh5co-article-title animate-box">{{r.title}}</h2></a>
-						 <p>{{r.body|truncatewords:15|safe}}</p>
+						 <p>{{r.body|truncatewords:15}}</p>
 				     </figure>
 
 				 </div>
