@@ -6,7 +6,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
 class author(models.Model):
-    name = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_picture= models.FileField()
     details = models.TextField()
     def __str__(self):
